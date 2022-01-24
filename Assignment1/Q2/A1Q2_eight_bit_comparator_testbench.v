@@ -1,5 +1,5 @@
 `include "A1Q2_eight_bit_comparator.v"
-module eight_bit_comparator_top;
+module eight_bit_comparator_testbench;
     reg [7:0] A;
     reg [7:0] B;
 
@@ -7,16 +7,8 @@ module eight_bit_comparator_top;
 
     eight_bit_comparator Comparator(A, B, less_out, equal_out, greater_out); //instantiating eight bit comparator here.
 
-    always @(A or B or less_out or equal_out or greater_out) begin
-        if(equal_out == 1'b1) begin
-            $display("At time = %d, %d is equal to %d", $time, A, B);
-        end
-        else if(less_out == 1'b1) begin
-            $display("At time = %d, %d is less than %d", $time, A, B);
-        end
-        else begin
-            $display("At time = %d, %d is greater than %d", $time, A, B);
-        end
+    initial begin
+        $monitor("At time = %t, inputs are %d and %d and less_out, equal_out and greater_out are %d, %d and %d respectively.",$time, A, B, less_out, equal_out,greater_out);
     end
 
     initial begin
@@ -49,5 +41,6 @@ module eight_bit_comparator_top;
         A = 86; B = 24;
         #5
         A = 62; B = 62;
+        $finish;
     end
 endmodule

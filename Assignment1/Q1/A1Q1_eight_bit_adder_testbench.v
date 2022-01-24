@@ -1,5 +1,5 @@
 `include "A1Q1_eight_bit_adder.v"
-module eight_bit_adder_top;
+module eight_bit_adder_testbench;
     reg [7:0] A;
     reg [7:0] B;
     reg Cin;
@@ -8,15 +8,10 @@ module eight_bit_adder_top;
     wire Carry;
     eight_bit_adder Adder(A, B, Cin, Sum, Carry); //instantiating eight bit adder here
 
-    always @(A or B or Cin or Sum or Carry) begin
-        $display("At time = %d, the inputs are = %d and %d and the carry_input is %d and the sum = %d, carry_out = %d",$time, A, B, Cin, Sum, Carry);
-    end
-/*
     initial begin
-        #80
-        $finish;
+        $monitor("At time %t, inputs are = %d and %d and the carry input = %d and the sum = %d, carry_out = %d",$time, A, B, Cin, Sum, Carry);
     end
-*/
+
     initial begin
         A = 0; B = 1; Cin = 0;
         #5
@@ -46,6 +41,7 @@ module eight_bit_adder_top;
         #5
         A = 39; B = 92; Cin = 0;
         #5
-        A = 28; B = 74; Cin = 0;
+        A = 120; B = 71; Cin = 0;
+        $finish;
     end
 endmodule
