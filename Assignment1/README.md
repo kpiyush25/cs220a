@@ -1,3 +1,9 @@
+## CS220 Assignment 1
+Team Members ( Group 56 )
+- Piyush Kumar ( 190601 )
+- Shivam Malhotra ( 190808 )
+- Shubham Gupta ( 180748 )
+
 ## Information/Assumption about our implementation :
 
 ### Running the code
