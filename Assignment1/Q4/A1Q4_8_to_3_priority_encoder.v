@@ -2,7 +2,7 @@ module PRIORITY_ENCODER_8x3(OUT, IN);
 
     output [2 : 0] OUT;
     input [7 : 0] IN;
-
+    // We simply check the position of the least significant 1 in the input and correspondingly assign the output.
     assign OUT = (IN[0] == 1'b1) ? 3'b000 : 
         (IN[1] == 1'b1) ? 3'b001 : 
         (IN[2] == 1'b1) ? 3'b010 : 

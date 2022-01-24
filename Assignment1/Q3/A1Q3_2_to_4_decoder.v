@@ -7,8 +7,8 @@ module DECODER_2x4 (
     output [3 : 0] OUT;
 
     // The following assignment has been derived from K-Map of 2x4 decoder. Enabled has been added to ensure that decoder can be controlled externally.
-    //Enable	Inputs	   Outputs
-    // E	    I1	I0	O3	O2	O1	O0
+    //Enable    Inputs      Outputs
+    // EN	    I1	I0	O3	O2	O1	O0
     // 0	    x	x	0	0	0	0
     // 1	    0	0	0	0	0	1
     // 1	    0	1	0	0	1	0
