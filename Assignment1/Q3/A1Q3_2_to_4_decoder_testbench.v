@@ -1,4 +1,4 @@
-`include "3_to_8_decoder.v"
+`include "A1Q3_2_to_4_decoder.v"
 
 module TESTBENCH ();
     reg [1 : 0] IN;
@@ -15,8 +15,6 @@ module TESTBENCH ();
         IN = 2'b10;
         #5;
         IN = 2'b11;
-        #5;
-        EN = 0;
         #5;
         $finish;
     end

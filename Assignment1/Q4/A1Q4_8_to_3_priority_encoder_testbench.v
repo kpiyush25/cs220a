@@ -1,4 +1,4 @@
-`include "8_to_3_priority_encoder.v"
+`include "A1Q4_8_to_3_priority_encoder.v"
 
 module TESTBENCH ();
 	reg [7 : 0] IN;
