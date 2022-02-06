@@ -14,7 +14,7 @@ module A2Q2_eight_bit_johnson_counter_testbench;
         clk <= 0;
         reset <= 0; // correspond to output being 0 as defined in the A2Q2_eight_bit_johnson_counter.v file.
 
-        $monitor("At time = %t, out is %b",$time, out);
+        $monitor("At time = %3d, out is %b",$time, out);
         #33
         $finish;
     end
