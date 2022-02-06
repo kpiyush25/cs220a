@@ -13,7 +13,8 @@ module A2Q2_eight_bit_johnson_counter(clk, reset, out);
             end
         end
         else begin
-            out <= 1;
+            out <= 0; 
+            // We can choose any value of "out" here from which the output starts. We have chosen it to be 0 here.
         end
     end
 endmodule
